@@ -1,0 +1,473 @@
+{
+  "package": "Europeana",
+  "tagline": "Europeana API",
+  "description": "Europeana",
+  "image": "http:\/\/logo.clearbit.com\/europeana.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Europeana-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "europeana.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "search",
+      "description": "Search for records",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Request query",
+          "required": true
+        },
+        {
+          "name": "qf",
+          "type": "Array",
+          "info": "Request query",
+          "required": false
+        },
+        {
+          "name": "reusability",
+          "type": "Array",
+          "info": "Reusability",
+          "required": false
+        },
+        {
+          "name": "profile",
+          "type": "String",
+          "info": "Profile",
+          "required": false
+        },
+        {
+          "name": "start",
+          "type": "Number",
+          "info": "Start",
+          "required": false
+        },
+        {
+          "name": "rows",
+          "type": "Number",
+          "info": "Rows",
+          "required": false
+        },
+        {
+          "name": "facet",
+          "type": "Array",
+          "info": "Facet",
+          "required": false
+        },
+        {
+          "name": "sort",
+          "type": "String",
+          "info": "Sort",
+          "required": false
+        },
+        {
+          "name": "colourpalette",
+          "type": "Array",
+          "info": "Colour palette",
+          "required": false
+        },
+        {
+          "name": "thumbnail",
+          "type": "Boolean",
+          "info": "Thumbnail",
+          "required": false
+        },
+        {
+          "name": "media",
+          "type": "Boolean",
+          "info": "Media",
+          "required": false
+        },
+        {
+          "name": "textFulltext",
+          "type": "Boolean",
+          "info": "Text fulltext",
+          "required": false
+        },
+        {
+          "name": "landingpage",
+          "type": "Boolean",
+          "info": "Landingpage",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "String",
+          "info": "Cursor",
+          "required": false
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSearchRecommendations",
+      "description": "Get autocompletion recommendations for search queries",
+      "args": [
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Request query",
+          "required": true
+        },
+        {
+          "name": "rows",
+          "type": "Number",
+          "info": "Rows",
+          "required": false
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        },
+        {
+          "name": "phrases",
+          "type": "Bolean",
+          "info": "Phrases",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "translateQuery",
+      "description": "Translate a term to different languages",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "term",
+          "type": "String",
+          "info": "Term",
+          "required": true
+        },
+        {
+          "name": "languageCodes",
+          "type": "Array",
+          "info": "Language codes",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        },
+        {
+          "name": "profile",
+          "type": "String",
+          "info": "Profile",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleRecord",
+      "description": "Get a single record",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "String",
+          "info": "Id of the collection",
+          "required": true
+        },
+        {
+          "name": "recordId",
+          "type": "String",
+          "info": "Id of the record",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        },
+        {
+          "name": "profile",
+          "type": "String",
+          "info": "Profile",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getDatasets",
+      "description": "Get the list of Europeana datasets",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        },
+        {
+          "name": "edmDatasetName",
+          "type": "String",
+          "info": "edm Dataset Name",
+          "required": false
+        },
+        {
+          "name": "countryCode",
+          "type": "String",
+          "info": "Country code",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Status",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "String",
+          "info": "Offset",
+          "required": false
+        },
+        {
+          "name": "pagesize",
+          "type": "String",
+          "info": "Page size",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleDataset",
+      "description": "Get information about a specific dataset",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "datasetId",
+          "type": "String",
+          "info": "Id of the dataset",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getDataProviders",
+      "description": "Get the list of Europeana data providers",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        },
+        {
+          "name": "countryCode",
+          "type": "String",
+          "info": "Country code",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "Status",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "type": "String",
+          "info": "Offset",
+          "required": false
+        },
+        {
+          "name": "pagesize",
+          "type": "String",
+          "info": "Page size",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProvider",
+      "description": "Get information about a specific data provider",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "providerId",
+          "type": "String",
+          "info": "Id of the data provider",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProviderDatasets",
+      "description": "Get the list of datasets provided by a specific provider",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Europeana",
+          "required": true
+        },
+        {
+          "name": "providerId",
+          "type": "String",
+          "info": "Id of the data provider",
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "String",
+          "info": "Callback",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
