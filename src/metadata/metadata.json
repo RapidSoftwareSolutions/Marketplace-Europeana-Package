@@ -149,7 +149,7 @@
         },
         {
           "name": "phrases",
-          "type": "Bolean",
+          "type": "Boolean",
           "info": "Phrases",
           "required": false
         }

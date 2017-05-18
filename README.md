@@ -35,12 +35,12 @@ Search for records
 ## Europeana.getSearchRecommendations
 Get autocompletion recommendations for search queries
 
-| Field   | Type  | Description
-|---------|-------|----------
-| query   | String| Request query
-| rows    | Number| Rows
-| callback| String| Callback
-| phrases | Bolean| Phrases
+| Field   | Type   | Description
+|---------|--------|----------
+| query   | String | Request query
+| rows    | Number | Rows
+| callback| String | Callback
+| phrases | Boolean| Phrases
 
 ## Europeana.translateQuery
 Translate a term to different languages
