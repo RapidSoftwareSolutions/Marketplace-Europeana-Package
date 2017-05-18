@@ -1,7 +1,7 @@
 {
   "package": "Europeana",
   "tagline": "Europeana API",
-  "description": "Europeana",
+  "description": "Explore 53,551,004 artworks, artefacts, books, videos and sounds from across Europe.",
   "image": "http:\/\/logo.clearbit.com\/europeana.com",
   "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Europeana-Package",
   "keywords": [

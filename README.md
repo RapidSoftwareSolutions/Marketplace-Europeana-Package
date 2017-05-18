@@ -1,7 +1,7 @@
 [![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Europeana/functions?utm_source=RapidAPIGitHub_EuropeanaFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 
 # Europeana Package
-Europeana
+Explore 53,551,004 artworks, artefacts, books, videos and sounds from across Europe.
 * Domain: [Europeana](http://europeana.com)
 * Credentials: apiKey
 
