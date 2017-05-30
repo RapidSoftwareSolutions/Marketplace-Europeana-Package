@@ -31,15 +31,25 @@
         },
         {
           "name": "qf",
-          "type": "Array",
+          "type": "List",
           "info": "Request query",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "qf",
+            "type": "String",
+            "info": "Single qf"
+          }
         },
         {
           "name": "reusability",
-          "type": "Array",
+          "type": "List",
           "info": "Reusability",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "reusability",
+            "type": "String",
+            "info": "Single reusability"
+          }
         },
         {
           "name": "profile",
@@ -61,9 +71,14 @@
         },
         {
           "name": "facet",
-          "type": "Array",
+          "type": "List",
           "info": "Facet",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "facet",
+            "type": "String",
+            "info": "Single facet"
+          }
         },
         {
           "name": "sort",
@@ -73,9 +88,14 @@
         },
         {
           "name": "colourpalette",
-          "type": "Array",
+          "type": "List",
           "info": "Colour palette",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "colourpalette",
+            "type": "String",
+            "info": "Single colourpalette"
+          }
         },
         {
           "name": "thumbnail",
@@ -183,9 +203,14 @@
         },
         {
           "name": "languageCodes",
-          "type": "Array",
+          "type": "List",
           "info": "Language codes",
-          "required": true
+          "required": true,
+          "structure": {
+            "name": "languageCode",
+            "type": "String",
+            "info": "Single languageCode"
+          }
         },
         {
           "name": "callback",

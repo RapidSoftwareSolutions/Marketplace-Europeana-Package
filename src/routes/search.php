@@ -17,10 +17,10 @@ $app->post('/api/Europeana/search', function ($request, $response, $args) {
 
     $body['query'] = $post_data['args']['query'];
 
-    if (isset($post_data['args']['qf']) && strlen($post_data['args']['qf']) > 0) {
+    if (isset($post_data['args']['qf']) && count($post_data['args']['qf']) > 0) {
         $body['qf'] = $post_data['args']['qf'];
     }
-    if (isset($post_data['args']['reusability']) && strlen($post_data['args']['reusability']) > 0) {
+    if (isset($post_data['args']['reusability']) && count($post_data['args']['reusability']) > 0) {
         $body['reusability'] = $post_data['args']['reusability'];
     }
     if (isset($post_data['args']['profile']) && strlen($post_data['args']['profile']) > 0) {
@@ -32,7 +32,7 @@ $app->post('/api/Europeana/search', function ($request, $response, $args) {
     if (isset($post_data['args']['rows']) && strlen($post_data['args']['rows']) > 0) {
         $body['rows'] = $post_data['args']['rows'];
     }
-    if (isset($post_data['args']['facet']) && strlen($post_data['args']['facet']) > 0) {
+    if (isset($post_data['args']['facet']) && count($post_data['args']['facet']) > 0) {
         $body['facet'] = $post_data['args']['facet'];
     }
     if (isset($post_data['args']['sort']) && strlen($post_data['args']['sort']) > 0) {
