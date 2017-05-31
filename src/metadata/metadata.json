@@ -31,25 +31,16 @@
         },
         {
           "name": "qf",
-          "type": "List",
+          "type": "String",
           "info": "Request query",
-          "required": false,
-          "structure": {
-            "name": "qf",
-            "type": "String",
-            "info": "Single qf"
-          }
+          "required": false
         },
         {
           "name": "reusability",
-          "type": "List",
+          "type": "Select",
+          "options": ["open", "restricted", "permission"],
           "info": "Reusability",
-          "required": false,
-          "structure": {
-            "name": "reusability",
-            "type": "String",
-            "info": "Single reusability"
-          }
+          "required": false
         },
         {
           "name": "profile",
@@ -88,14 +79,9 @@
         },
         {
           "name": "colourpalette",
-          "type": "List",
+          "type": "String",
           "info": "Colour palette",
-          "required": false,
-          "structure": {
-            "name": "colourpalette",
-            "type": "String",
-            "info": "Single colourpalette"
-          }
+          "required": false
         },
         {
           "name": "thumbnail",

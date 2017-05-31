@@ -17,7 +17,7 @@ $app->post('/api/Europeana/search', function ($request, $response, $args) {
 
     $body['query'] = $post_data['args']['query'];
 
-    if (isset($post_data['args']['qf']) && count($post_data['args']['qf']) > 0) {
+    if (isset($post_data['args']['qf']) && strlen($post_data['args']['qf']) > 0) {
         $body['qf'] = $post_data['args']['qf'];
     }
     if (isset($post_data['args']['reusability']) && count($post_data['args']['reusability']) > 0) {

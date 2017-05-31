@@ -15,7 +15,7 @@ $app->post('/api/Europeana/translateQuery', function ($request, $response, $args
     $body = array();
     $body['wskey'] = $post_data['args']['apiKey'];
     $body['term'] = $post_data['args']['term'];
-    $body['languageCodes'] = $post_data['args']['languageCodes'];
+    $body['languageCodes'] = is_array($post_data['args']['languageCodes']) ? implode(',', $post_data['args']['languageCodes']) : $post_data['args']['languageCodes'];
 
     if (isset($post_data['args']['profile']) && strlen($post_data['args']['profile']) > 0) {
         $body['profile'] = $post_data['args']['profile'];

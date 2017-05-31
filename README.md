@@ -28,14 +28,14 @@ Search for records
 |--------------|------------|----------
 | apiKey       | credentials| Api key obtained from Europeana
 | query        | String     | Request query
-| qf           | List       | Request query
-| reusability  | List       | Reusability
+| qf           | String       | Request query
+| reusability  | Select       | Reusability
 | profile      | String     | Profile
 | start        | Number     | Start
 | rows         | Number     | Rows
 | facet        | List       | Facet
 | sort         | String     | Sort
-| colourpalette| List       | Colour palette
+| colourpalette| String       | Colour palette
 | thumbnail    | Boolean    | Thumbnail
 | media        | Boolean    | Media
 | textFulltext | Boolean    | Text fulltext
