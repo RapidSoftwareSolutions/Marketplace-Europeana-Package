@@ -17,8 +17,8 @@ $app->post('/api/Europeana/search', function ($request, $response, $args) {
 
     $body['query'] = $post_data['args']['query'];
 
-    if (isset($post_data['args']['qf']) && strlen($post_data['args']['qf']) > 0) {
-        $body['qf'] = $post_data['args']['qf'];
+    if (!empty($post_data['args']['qf'])) {
+        $body['qf'] = is_array($post_data['args']['qf']) ? implode(',',$post_data['args']['qf']) : $post_data['args']['qf'];
     }
     if (isset($post_data['args']['reusability']) && count($post_data['args']['reusability']) > 0) {
         $body['reusability'] = $post_data['args']['reusability'];
@@ -32,14 +32,14 @@ $app->post('/api/Europeana/search', function ($request, $response, $args) {
     if (isset($post_data['args']['rows']) && strlen($post_data['args']['rows']) > 0) {
         $body['rows'] = $post_data['args']['rows'];
     }
-    if (isset($post_data['args']['facet']) && count($post_data['args']['facet']) > 0) {
-        $body['facet'] = $post_data['args']['facet'];
+    if (!empty($post_data['args']['facet'])) {
+        $body['facet'] = is_array($post_data['args']['facet']) ? implode(',',$post_data['args']['facet']) : $post_data['args']['facet'];
     }
     if (isset($post_data['args']['sort']) && strlen($post_data['args']['sort']) > 0) {
         $body['sort'] = $post_data['args']['sort'];
     }
-    if (isset($post_data['args']['colourpalette']) && strlen($post_data['args']['colourpalette']) > 0) {
-        $body['colourpalette'] = $post_data['args']['colourpalette'];
+    if (!empty($post_data['args']['colourpalette'])) {
+        $body['colourpalette'] = is_array($post_data['args']['colourpalette']) ? implode(',',$post_data['args']['colourpalette']) : $post_data['args']['colourpalette'];
     }
     if (isset($post_data['args']['thumbnail']) && strlen($post_data['args']['thumbnail']) > 0) {
         $body['thumbnail'] = $post_data['args']['thumbnail'];
